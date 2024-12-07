@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лікарняний додаток</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Лікарняний додаток</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Головна</a></li>
+                    <li><a href="#services">Послуги</a></li>
+                    <li><a href="#appointment">Запис</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="section">
+        <div class="container">
+            <h2>Ласкаво просимо до нашої лікарні!</h2>
+            <p>Надаємо кваліфіковану медичну допомогу. Запишіться на прийом просто зараз.</p>
+            <button id="openModal" class="btn">Записатися</button>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Наші послуги</h2>
+            <ul>
+                <li>Консультація терапевта</li>
+                <li>Обстеження кардіолога</li>
+                <li>Дитячий прийом</li>
+                <li>Аналізи та діагностика</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="appointment" class="section">
+        <div class="container">
+            <h2>Запис до лікаря</h2>
+            <p>Обирайте зручний час і спеціаліста.</p>
+            <button id="openModal2" class="btn">Записатися</button>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Контакти</h2>
+            <p>Телефон: +380 123 456 789</p>
+            <p>Email: info@hospital.com</p>
+            <p>Адреса: м. Київ, вул. Медична, 12</p>
+        </div>
+    </section>
+
+    <!-- Модальне вікно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3>Запис до лікаря</h3>
+            <form id="appointmentForm">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="doctor">Лікар:</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="">Оберіть лікаря</option>
+                    <option value="Кардіолог">Кардіолог</option>
+                    <option value="Терапевт">Терапевт</option>
+                    <option value="Педіатр">Педіатр</option>
+                </select>
+
+                <label for="date">Дата:</label>
+                <input type="date" id="date" name="date" required>
+
+                <button type="submit" class="btn">Підтвердити</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Лікарняний додаток. Всі права захищено.</p>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
